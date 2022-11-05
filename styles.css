@@ -122,8 +122,13 @@ p {
   padding: 3rem 2rem;
 
   background-color: var(--color-dark-blue);
-
+  margin: auto 2rem;
   border-radius: 20px;
+}
+@media screen and (max-width: 360px) {
+  .card-container {
+    transform: scale(0.7);
+  }
 }
 .card-header {
   font-size: 2rem;
@@ -169,10 +174,14 @@ p {
   background-color: var(--color-light-blue);
   color: var(--color-light-grey);
 }
-.btn-rating:hover {
-  background-color: var(--color-light-grey);
-  color: var(--color-white);
+@media (hover: none) {
+  /*targets only medias that can not be hover for mobile devices or tabs <!--TODO:*/
+  .btn-rating:hover {
+    background-color: var(--color-Orange);
+    color: var(--color-white);
+  }
 }
+
 .btn-submit {
   padding: 1.3rem 1rem;
   font-size: 1.3rem;

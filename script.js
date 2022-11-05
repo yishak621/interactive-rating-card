@@ -11,24 +11,24 @@ import {
   home,
 } from './javascript/declaration.js';
 
-//logic-when we click on the btns container[ratingbtns]
-ratingBtns.addEventListener('click', (e) => {
-  const id = e.target.dataset.id;
-
-  if (id) {
-    //remove active state from btns
-    eachBtns.forEach((btn) => {
-      btn.classList.remove('btn-active');
-      e.target.classList.add('btn-active');
-      textResult.innerHTML = `You selected ${id} out of 5`; //printing the selected value to result
-    });
-  }
-});
 //Submit btn click event
 submitBtn.addEventListener('click', () => {
   ratingCard.classList.add('hidden');
   selectedCard.classList.remove('hidden');
   home.classList.remove('hidden');
+  //logic-when we click on the btns container[ratingbtns]
+  ratingBtns.addEventListener('click', (e) => {
+    const id = e.target.dataset.id;
+
+    if (id) {
+      //remove active state from btns
+      eachBtns.forEach((btn) => {
+        btn.classList.remove('btn-active');
+        e.target.classList.add('btn-active');
+        textResult.innerHTML = `You selected ${id} out of 5`; //printing the selected value to result
+      });
+    }
+  });
 });
 //home btn click event
 home.addEventListener('click', () => {

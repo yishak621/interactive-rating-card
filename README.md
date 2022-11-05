@@ -69,6 +69,18 @@ the parent container for rating btns is
 </h1>
 ```
 
+and also for writing a media query for those who cant be hover[mobile and tabs]
+
+```css
+@media (hover: none) {
+  /*targets only medias that can not be hover for mobile devices or tabs <!--TODO:*/
+  .btn-rating:hover {
+    background-color: var(--color-Orange);
+    color: var(--color-white);
+  }
+}
+```
+
 and the result card should be set like these by default when we acess the DOM we remove these classlist and then add it to the
 rating card thats the whole logic in the css
 
