@@ -1,0 +1,237 @@
+/*animations*/
+@keyframes bubble {
+  0% {
+    background-color: green;
+  }
+  25% {
+    background-color: rgb(128, 87, 0);
+  }
+  50% {
+    background-color: rgb(234, 238, 10);
+  }
+  75% {
+    background-color: rgb(128, 21, 0);
+  }
+  100% {
+    background-color: rgb(15, 0, 128);
+  }
+}
+/*General parameters*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Overpass', sans-serif;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*Typography*/
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 864px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*Variables*/
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-grey: hsl(217, 12%, 63%);
+  --color-medium-grey: hsl(216, 12%, 54%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-Orange: hsl(25, 97%, 53%);
+  --color-very-dark-blue: hsl(216, 12%, 8%);
+  --color-light-blue: hsl(214, 19%, 22%);
+
+  --transition: all 0.3s linear;
+  --transition-slow: transform 0.5s ease-in-out;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1100px;
+  --max-width2: 95vw;
+}
+
+/*main container*/
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-very-dark-blue);
+}
+/*Card design*/
+.card-container {
+  display: grid;
+  grid-template-columns: 30rem;
+  max-width: 40rem;
+  row-gap: 2.3rem;
+  padding: 3rem 2rem;
+
+  background-color: var(--color-dark-blue);
+
+  border-radius: 20px;
+}
+.card-header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--color-white);
+}
+.card-paragraph {
+  font-weight: 400;
+  color: var(--color-light-grey);
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--color-light-blue);
+}
+/*buttons*/
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  font-size: 1.5rem;
+  align-self: center;
+  font-weight: 400;
+
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-rating {
+  padding: 10px 15px;
+  border-radius: 100%; /*important*/
+  display: inline;
+
+  background-color: var(--color-light-blue);
+  color: var(--color-light-grey);
+}
+.btn-rating:hover {
+  background-color: var(--color-light-grey);
+  color: var(--color-white);
+}
+.btn-submit {
+  padding: 1.3rem 1rem;
+  font-size: 1.3rem;
+  color: var(--color-white);
+  background-color: var(--color-Orange);
+
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  margin-top: 1rem;
+}
+.btn-submit:hover {
+  background-color: var(--color-white);
+  color: var(--color-Orange);
+}
+@media screen and (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: 33rem;
+  }
+  .btn-rating {
+    padding: 15px 20px;
+  }
+  .card-header {
+    font-size: 2.2rem;
+  }
+}
+/*thank you state */
+.selected {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.result-text {
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--color-light-blue);
+  color: var(--color-Orange);
+  justify-self: center;
+  border-radius: 15px;
+}
+.thank-you {
+  font-size: 2.3rem;
+  color: var(--color-white);
+}
+.hidden {
+  opacity: 0;
+  display: none;
+}
+/*Javascript added states*/
+.btn-active {
+  background-color: var(--color-Orange);
+  color: var(--color-white);
+}
+/*back to home*/
+.home {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  color: var(--color-Orange);
+  border-radius: var(--radius);
+  animation: bubble 5s infinite ease-in-out;
+}
