@@ -72,6 +72,12 @@ the parent container for rating btns is
 and also for writing a media query for those who cant be hover[mobile and tabs]
 
 ```css
+@media (hover: hover) {
+  .btn-rating:hover {
+    background-color: var(--color-light-grey);
+    color: var(--color-white);
+  }
+}
 @media (hover: none) {
   /*targets only medias that can not be hover for mobile devices or tabs <!--TODO:*/
   .btn-rating:hover {
