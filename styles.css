@@ -16,6 +16,26 @@
     background-color: rgb(15, 0, 128);
   }
 }
+@keyframes apple {
+  0% {
+    transform: translateX(25%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  40% {
+    transform: translateX(10%);
+  }
+  55% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
 /*General parameters*/
 html {
   font-size: 62.5%;
@@ -127,7 +147,7 @@ p {
 }
 @media screen and (max-width: 360px) {
   .card-container {
-    transform: scale(0.7);
+    transform: scale(0.85);
   }
 }
 .card-header {
@@ -249,4 +269,21 @@ p {
   color: var(--color-Orange);
   border-radius: var(--radius);
   animation: bubble 5s infinite ease-in-out;
+}
+.error {
+  position: absolute;
+  left: 40vw;
+  top: 3rem;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+
+  font-weight: 700;
+  background-color: rgb(255, 255, 255);
+  color: rgb(246, 8, 8);
+  animation: apple 0.5s normal ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .error {
+    left: 17vw;
+  }
 }

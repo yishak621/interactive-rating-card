@@ -8,3 +8,4 @@ export const submitBtn = getElement('.btn-submit');
 export const selectedCard = getElement('.selected');
 export const textResult = getElement('.result-text');
 export const home = getElement('.home');
+export const errorMessage = getElement('.error');
