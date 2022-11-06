@@ -22,10 +22,9 @@ submitBtn.addEventListener('click', () => {
       selectedCard.classList.remove('hidden');
       home.classList.remove('hidden');
     } else {
-      errorMessage.classList.remove('hidden');
+      errorMessage.classList.add('error-active');
       function hideError() {
-        errorMessage.textContent = '';
-        errorMessage.classList.remove('error');
+        errorMessage.classList.remove('error-active');
       }
       setTimeout(hideError, 2000);
     }

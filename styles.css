@@ -280,6 +280,11 @@ p {
   font-weight: 700;
   background-color: rgb(255, 255, 255);
   color: rgb(246, 8, 8);
+
+  opacity: 0;
+}
+.error-active {
+  opacity: 1;
   animation: apple 0.5s normal ease-in-out;
 }
 @media screen and (max-width: 800px) {
