@@ -21,6 +21,8 @@ submitBtn.addEventListener('click', () => {
       ratingCard.classList.add('hidden');
       selectedCard.classList.remove('hidden');
       home.classList.remove('hidden');
+    } else if (!selectedCard.classList.contains('hidden')) {
+      errorMessage.classList.remove('error-active');
     } else {
       errorMessage.classList.add('error-active');
       function hideError() {
@@ -28,6 +30,7 @@ submitBtn.addEventListener('click', () => {
       }
       setTimeout(hideError, 2000);
     }
+    console.log(btn.classList.contains('btn-active'));
   });
 });
 //home btn click event
