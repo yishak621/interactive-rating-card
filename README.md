@@ -108,6 +108,29 @@ eachBtns.forEach((btn) => {
 });
 ```
 
+and also checking if the user didnt click on the rating btn and showing a error message using forEach method
+
+```js
+const newArray = [...eachBtns]; //spread operator to convert them to array
+newArray.forEach((btn) => {
+  //checking if the user click on rating btn-at least one of it makes it true
+  if (btn.classList.contains('btn-active')) {
+    ratingCard.classList.add('hidden');
+    selectedCard.classList.remove('hidden');
+    home.classList.remove('hidden');
+    errorMessage.classList.remove('error-active');
+  } else if (!selectedCard.classList.contains('hidden')) {
+    errorMessage.classList.remove('error-active');
+  } else {
+    errorMessage.classList.add('error-active');
+    function hideError() {
+      errorMessage.classList.remove('error-active');
+    }
+    setTimeout(hideError, 2000);
+  }
+});
+```
+
 ### Continued development
 
 to be honest i just wanna practice the logic in the rating section(not on these project) is when the user rated first and then when
