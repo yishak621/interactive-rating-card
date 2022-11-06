@@ -1,19 +1,13 @@
 /*animations*/
 @keyframes bubble {
   0% {
-    background-color: green;
-  }
-  25% {
-    background-color: rgb(128, 87, 0);
+    background-color: rgb(14, 36, 200);
   }
   50% {
-    background-color: rgb(234, 238, 10);
-  }
-  75% {
-    background-color: rgb(128, 21, 0);
+    background-color: rgb(6, 6, 6);
   }
   100% {
-    background-color: rgb(15, 0, 128);
+    background-color: rgb(101, 101, 103);
   }
 }
 @keyframes apple {
@@ -34,6 +28,24 @@
   }
   100% {
     transform: translateX(-5%);
+  }
+}
+@keyframes left {
+  0% {
+    transform: translateX(-5px);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  75% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*General parameters*/
@@ -260,16 +272,6 @@ p {
   background-color: var(--color-Orange);
   color: var(--color-white);
 }
-/*back to home*/
-.home {
-  padding: 0.5rem 1rem;
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  color: var(--color-Orange);
-  border-radius: var(--radius);
-  animation: bubble 5s infinite ease-in-out;
-}
 .error {
   position: absolute;
   left: 40vw;
@@ -292,4 +294,17 @@ p {
   .error {
     left: 17vw;
   }
+}
+/*back to home*/
+.home {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  color: var(--color-Orange);
+  border-radius: var(--radius);
+  animation: bubble 5s infinite ease-in-out;
+}
+.fa-angles-left {
+  animation: left 2s infinite ease-in;
 }
