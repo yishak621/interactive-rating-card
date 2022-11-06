@@ -178,7 +178,7 @@ p {
 }
 @media screen and (max-width: 360px) {
   .card-container {
-    transform: scale(0.85);
+    transform: scale(0.9);
   }
 }
 .card-header {
