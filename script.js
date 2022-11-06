@@ -54,7 +54,7 @@ function callBack() {
       eachBtns.forEach((btn) => {
         btn.classList.remove('btn-active');
         e.target.classList.add('btn-active');
-        textResult.innerHTML = `You selected ${id} out of 5`; //printing the selected value to result
+        textResult.innerHTML = `You selected <span class="result-number"> ${id}</span> out of 5`; //printing the selected value to result
       });
     }
   });
