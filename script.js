@@ -17,10 +17,12 @@ submitBtn.addEventListener('click', () => {
   callBack();
   const newArray = [...eachBtns]; //spread operator to convert them to array
   newArray.forEach((btn) => {
+    //checking if the user click on rating btn-at least one of it makes it true
     if (btn.classList.contains('btn-active')) {
       ratingCard.classList.add('hidden');
       selectedCard.classList.remove('hidden');
       home.classList.remove('hidden');
+      errorMessage.classList.remove('error-active');
     } else if (!selectedCard.classList.contains('hidden')) {
       errorMessage.classList.remove('error-active');
     } else {
@@ -30,7 +32,6 @@ submitBtn.addEventListener('click', () => {
       }
       setTimeout(hideError, 2000);
     }
-    console.log(btn.classList.contains('btn-active'));
   });
 });
 //home btn click event
@@ -47,9 +48,8 @@ function callBack() {
   //logic-when we click on the btns container[ratingbtns]
   ratingBtns.addEventListener('click', (e) => {
     const id = e.target.dataset.id;
-
+    console.log(id);
     if (id) {
-      console.log(id);
       //remove active state from btns
       eachBtns.forEach((btn) => {
         btn.classList.remove('btn-active');
@@ -60,13 +60,3 @@ function callBack() {
   });
 }
 callBack();
-
-/** if (!btn.classList.contains('btn-active')) {
-      console.log(!btn.classList.contains('btn-active'));
-      console.log(btn);
-      throw Error(`yo you didn't select the rating button`);
-    } else {
-      ratingCard.classList.add('hidden');
-      selectedCard.classList.remove('hidden');
-      home.classList.remove('hidden');
-    }*/
