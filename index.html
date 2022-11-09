@@ -27,6 +27,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <!--data-aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <main class="main-container">
@@ -42,7 +44,13 @@
         </p></span
       >
       <!--main card container-->
-      <div class="card-container rating">
+      <div
+        class="card-container rating"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
+        >
         <div class="icon-container">
           <i><img src="./images/icon-star.svg" alt="" srcset="" /></i>
         </div>
@@ -62,7 +70,7 @@
         <button class="btn btn-submit">submit</button>
       </div>
 
-      <div class="card-container selected hidden">
+      <div class="card-container selected hidden" data-aos="zoom-out-up">
         <picture class="icon-mobile">
           <img src="./images/illustration-thank-you.svg" alt="thank-you" />
         </picture>
@@ -76,5 +84,9 @@
     </main>
     <!--javascript-->
     <script type="module" src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
